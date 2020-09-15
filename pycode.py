@@ -26,10 +26,6 @@ value_send = aio.create_data('bot2',value)
 from telegram.ext import Updater,CommandHandler
 import requests  # Getting the data from the cloud
 
-def get_url():
-    contents = requests.get('https://random.dog/woof.json').json()
-    url = contents['url']
-    return url
 
 def on(bot,update):
     url = get_url()
